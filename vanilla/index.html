@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sally's Archive Box</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- Custom cursor -->
   <div class="cursor-dot" id="cursorDot"></div>
@@ -31,106 +37,143 @@
 
   <!-- Back button (hidden on landing) -->
   <button id="backBtn" class="back-btn" data-nav="landing">
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <path d="M9 2L4 7l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
     Archive Box
   </button>
 
-  <!-- ══════════════════════════════════════════════ -->
-  <!-- PAGE WRAPPER — only one section visible at a time -->
-  <!-- ══════════════════════════════════════════════ -->
+
+  <!-- PAGE WRAPPER  only one section visible at a time -->
   <div id="pageWrapper">
 
-    <!-- ═══════ LANDING ═══════ -->
-    <section id="landing" class="section-panel graph-bg active" style="min-height:100vh;padding-top:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden">
+    <!--  LANDING  -->
+    <section id="landing" class="section-panel graph-bg active"
+      style="min-height:100vh;padding-top:80px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden">
       <!-- Ambient glow -->
-      <div style="position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(139,115,85,0.055)0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none"></div>
+      <div
+        style="position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(139,115,85,0.055)0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none">
+      </div>
 
       <!-- Doodles -->
       <svg class="doodle" style="top:90px;right:72px;width:140px;height:140px;opacity:0.1" viewBox="0 0 140 140">
-        <circle cx="70" cy="70" r="58" stroke="rgba(139,115,85,0.9)" stroke-width="1" fill="none" stroke-dasharray="5 8" class="path-draw"/>
-        <path d="M28,70 Q70,22 112,70 Q70,118 28,70" stroke="rgba(139,115,85,0.65)" stroke-width="1" fill="none" class="path-draw"/>
+        <circle cx="70" cy="70" r="58" stroke="rgba(139,115,85,0.9)" stroke-width="1" fill="none" stroke-dasharray="5 8"
+          class="path-draw" />
+        <path d="M28,70 Q70,22 112,70 Q70,118 28,70" stroke="rgba(139,115,85,0.65)" stroke-width="1" fill="none"
+          class="path-draw" />
       </svg>
       <svg class="doodle" style="bottom:130px;left:72px;width:96px;height:96px;opacity:0.08" viewBox="0 0 96 96">
-        <rect x="8" y="8" width="80" height="80" rx="4" stroke="rgba(139,115,85,0.9)" stroke-width="1" fill="none" stroke-dasharray="4 6" class="path-draw"/>
-        <line x1="8" y1="48" x2="88" y2="48" stroke="rgba(139,115,85,0.5)" stroke-width="1" class="path-draw"/>
-        <line x1="48" y1="8" x2="48" y2="88" stroke="rgba(139,115,85,0.5)" stroke-width="1" class="path-draw"/>
+        <rect x="8" y="8" width="80" height="80" rx="4" stroke="rgba(139,115,85,0.9)" stroke-width="1" fill="none"
+          stroke-dasharray="4 6" class="path-draw" />
+        <line x1="8" y1="48" x2="88" y2="48" stroke="rgba(139,115,85,0.5)" stroke-width="1" class="path-draw" />
+        <line x1="48" y1="8" x2="48" y2="88" stroke="rgba(139,115,85,0.5)" stroke-width="1" class="path-draw" />
       </svg>
 
       <!-- Landing text -->
       <div style="text-align:center;position:relative;z-index:10;margin-bottom:56px">
-        <div style="font-family:var(--mono);font-size:10.5px;letter-spacing:0.26em;text-transform:uppercase;color:var(--warm-gray);margin-bottom:16px">Creative Portfolio — Archive No. 001</div>
-        <h1 id="landingTitle" style="font-family:var(--serif);font-size:clamp(56px,8vw,100px);font-weight:300;line-height:0.96;color:var(--dark-brown);letter-spacing:-0.02em"></h1>
-        <p style="font-family:var(--sans);font-size:12.5px;color:var(--warm-gray);letter-spacing:0.07em;font-weight:300;margin-top:14px">Hover the box to explore</p>
+        <div
+          style="font-family:var(--mono);font-size:10.5px;letter-spacing:0.26em;text-transform:uppercase;color:var(--warm-gray);margin-bottom:16px">
+          Archive No. 001</div>
+        <h1 id="landingTitle"
+          style="font-family:var(--serif);font-size:clamp(56px,8vw,100px);font-weight:300;line-height:0.96;color:var(--dark-brown);letter-spacing:-0.02em">
+        </h1>
+        <p
+          style="font-family:var(--sans);font-size:12.5px;color:var(--warm-gray);letter-spacing:0.07em;font-weight:300;margin-top:14px">
+          Hover the box to explore</p>
       </div>
 
       <!-- Box + Folders scene -->
       <div id="boxScene" class="box-scene" style="position:relative;width:430px;height:350px">
         <!-- Trajectory arc -->
-        <svg style="position:absolute;top:55px;left:50%;transform:translateX(-50%);width:380px;height:80px;pointer-events:none" viewBox="0 0 380 80" fill="none">
-          <path class="traj-path" d="M 40 74 Q 95 14 190 6 Q 285 14 340 74" stroke="rgba(139,115,85,0.32)" stroke-width="1" stroke-dasharray="4 6"/>
+        <svg
+          style="position:absolute;top:55px;left:50%;transform:translateX(-50%);width:380px;height:80px;pointer-events:none"
+          viewBox="0 0 380 80" fill="none">
+          <path class="traj-path" d="M 40 74 Q 95 14 190 6 Q 285 14 340 74" stroke="rgba(139,115,85,0.32)"
+            stroke-width="1" stroke-dasharray="4 6" />
         </svg>
 
         <!-- Folders -->
-        <button class="folder-item f1" data-nav="intro" style="position:absolute;left:30px;top:50px;width:78px;height:94px;background:#5C7A5C" data-hover>
+        <button class="folder-item f1" data-nav="intro"
+          style="position:absolute;left:30px;top:50px;width:78px;height:94px;background:#5C7A5C" data-hover>
           <div class="folder-tip">Introduction</div>
           <span>Intro</span>
         </button>
-        <button class="folder-item f2" data-nav="uiux" style="position:absolute;left:100px;top:18px;width:78px;height:94px;background:#C9A84C" data-hover>
+        <button class="folder-item f2" data-nav="uiux"
+          style="position:absolute;left:100px;top:18px;width:78px;height:94px;background:#C9A84C" data-hover>
           <div class="folder-tip">UI / UX</div>
           <span>UI/UX</span>
         </button>
-        <button class="folder-item f3" data-nav="webdev" style="position:absolute;left:170px;top:6px;width:78px;height:94px;background:#4A6B8A" data-hover>
+        <button class="folder-item f3" data-nav="webdev"
+          style="position:absolute;left:170px;top:6px;width:78px;height:94px;background:#4A6B8A" data-hover>
           <div class="folder-tip">Web Dev</div>
           <span>Web Dev</span>
         </button>
-        <button class="folder-item f4" data-nav="anim3d" style="position:absolute;left:240px;top:18px;width:78px;height:94px;background:#9A4A4A" data-hover>
+        <button class="folder-item f4" data-nav="anim3d"
+          style="position:absolute;left:240px;top:18px;width:78px;height:94px;background:#9A4A4A" data-hover>
           <div class="folder-tip">3D Animation</div>
           <span>3D</span>
         </button>
-        <button class="folder-item f5" data-nav="papers" style="position:absolute;left:310px;top:50px;width:78px;height:94px;background:#C47A8A" data-hover>
+        <button class="folder-item f5" data-nav="papers"
+          style="position:absolute;left:310px;top:50px;width:78px;height:94px;background:#C47A8A" data-hover>
           <div class="folder-tip">Papers</div>
           <span>Papers</span>
         </button>
 
         <!-- Archive Box -->
         <div style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:250px;height:200px">
-          <div class="box-lid" style="position:absolute;top:0;left:-8px;right:-8px;height:46px;background:linear-gradient(145deg,#C8B896,#B8A07E);border-radius:4px 4px 0 0;border:1px solid rgba(139,115,85,0.38);box-shadow:0 -4px 22px rgba(74,55,40,0.13)">
-            <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:44px;height:4px;background:rgba(74,55,40,0.2);border-radius:2px"></div>
+          <div class="box-lid"
+            style="position:absolute;top:0;left:-8px;right:-8px;height:46px;background:linear-gradient(145deg,#C8B896,#B8A07E);border-radius:4px 4px 0 0;border:1px solid rgba(139,115,85,0.38);box-shadow:0 -4px 22px rgba(74,55,40,0.13)">
+            <div
+              style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:44px;height:4px;background:rgba(74,55,40,0.2);border-radius:2px">
+            </div>
           </div>
           <div class="box-body-wrap" style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:100%">
-            <div style="height:162px;background:linear-gradient(145deg,#D4C5A9,#C0AA88);border-radius:4px 4px 8px 8px;border:1px solid rgba(139,115,85,0.38);box-shadow:0 22px 64px rgba(74,55,40,0.24),inset 0 1px 0 rgba(255,255,255,0.28);position:relative">
+            <div
+              style="height:162px;background:linear-gradient(145deg,#D4C5A9,#C0AA88);border-radius:4px 4px 8px 8px;border:1px solid rgba(139,115,85,0.38);box-shadow:0 22px 64px rgba(74,55,40,0.24),inset 0 1px 0 rgba(255,255,255,0.28);position:relative">
               <div style="position:absolute;inset:12px;border:1px dashed rgba(139,115,85,0.22);border-radius:2px"></div>
-              <span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:10.5px;letter-spacing:0.32em;color:rgba(74,55,40,0.3)">ARCHIVE</span>
+              <span
+                style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--mono);font-size:10.5px;letter-spacing:0.32em;color:rgba(74,55,40,0.3)">ARCHIVE</span>
             </div>
           </div>
         </div>
       </div>
 
-      <p style="position:absolute;bottom:40px;text-align:center;font-family:var(--mono);font-size:10.5px;letter-spacing:0.22em;color:var(--warm-gray);animation:blink 2s ease-in-out infinite">hover to open — click folder to enter</p>
+      <p
+        style="position:absolute;bottom:40px;text-align:center;font-family:var(--mono);font-size:10.5px;letter-spacing:0.22em;color:var(--warm-gray);animation:blink 2s ease-in-out infinite">
+        hover to open - click folder to enter</p>
     </section>
 
-    <!-- ═══════ INTRODUCTION ═══════ -->
-    <section id="intro" class="section-panel intro-bg" style="padding:120px 0 80px;min-height:100vh;position:relative;display:none">
+    <!--  INTRODUCTION  -->
+    <section id="intro" class="section-panel intro-bg"
+      style="padding:120px 0 80px;min-height:100vh;position:relative;display:none">
       <!-- Doodles -->
       <svg class="doodle" style="top:120px;right:64px;width:130px;height:130px;opacity:0.12" viewBox="0 0 130 130">
-        <circle cx="65" cy="65" r="55" stroke="rgba(139,115,85,0.9)" stroke-width="1" fill="none" stroke-dasharray="5 7" class="path-draw"/>
-        <path d="M35,65 Q65,25 95,65 Q65,105 35,65" stroke="rgba(139,115,85,0.7)" stroke-width="1" fill="none" class="path-draw"/>
+        <circle cx="65" cy="65" r="55" stroke="rgba(139,115,85,0.9)" stroke-width="1" fill="none" stroke-dasharray="5 7"
+          class="path-draw" />
+        <path d="M35,65 Q65,25 95,65 Q65,105 35,65" stroke="rgba(139,115,85,0.7)" stroke-width="1" fill="none"
+          class="path-draw" />
       </svg>
       <svg class="doodle" style="bottom:100px;left:48px;width:90px;height:90px;opacity:0.08" viewBox="0 0 90 90">
-        <path d="M10,45 Q45,5 80,45 Q45,85 10,45" stroke="rgba(139,115,85,0.9)" stroke-width="1" fill="none" class="path-draw"/>
+        <path d="M10,45 Q45,5 80,45 Q45,85 10,45" stroke="rgba(139,115,85,0.9)" stroke-width="1" fill="none"
+          class="path-draw" />
       </svg>
 
-      <div class="section-header"><div class="section-tag">File No. 001</div><h2 class="section-title">Personal <em>Archive File</em></h2></div>
+      <div class="section-header">
+        <div class="section-tag">File No. 001</div>
+        <h2 class="section-title">Personal <em>Archive File</em></h2>
+      </div>
 
       <div class="intro-grid">
         <!-- PROFILE -->
         <div class="paper-card reveal" style="grid-column:span 1;text-align:center">
           <div class="profile-img" style="padding:0;overflow:hidden;background:none">
-            <img src="assets/Sally.png" alt="Sally Tran" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+            <img src="assets/Sally.png" alt="Sally Tran"
+              style="width:100%;height:100%;object-fit:cover;border-radius:50%">
           </div>
           <div class="label-mono">Subject</div>
           <div class="name-serif">Sally Tran</div>
-          <div class="desc-text">Designer, developer & researcher exploring the intersection of AI, communication, and human experience.</div>
+          <div class="desc-text">Designer, developer & researcher exploring the intersection of AI, communication, and
+            human experience.</div>
           <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px">
             <div style="width:7px;height:7px;border-radius:50%;background:var(--folder-green)"></div>
             <span style="font-size:11.5px;color:var(--warm-gray)">Available for work</span>
@@ -142,8 +185,14 @@
           <div class="stamp">FILE<br>OPEN</div>
           <div class="label-mono">About Me</div>
           <div class="name-serif">Who I Am</div>
-          <p class="desc-text">I'm a multidisciplinary creator studying Information Communication at Yuan Ze University. With a background spanning UI/UX design, web development, 3D animation, and AI research, I build things that feel considered — products that invite users to linger, explore, and remember.</p>
-          <p class="desc-text" style="margin-top:12px">Currently working as a Research Assistant in Prof. Fang's AI Lab and a Teaching Assistant at Yuan Ze. Open to collaboration and creative opportunities.</p>
+          <h2 class="intro-greeting">
+            Hello! My name is Sally!
+          </h2>
+          <p class="desc-text">I'm a multidisciplinary creator studying Information Communication at Yuan Ze University.
+            With a background spanning UI/UX design, web development, 3D animation, and AI research, I build things that
+            feel considered products that invite users to linger, explore, and remember.</p>
+          <p class="desc-text" style="margin-top:12px">Currently working as a Research Assistant in Prof. Fang's AI Lab
+            and a Teaching Assistant at Yuan Ze. Open to collaboration and creative opportunities.</p>
         </div>
 
         <!-- SKILLS -->
@@ -152,11 +201,15 @@
           <div class="name-serif">Toolkit</div>
           <div style="margin-bottom:14px">
             <div class="label-mono" style="margin-bottom:8px">DESIGN</div>
-            <div><span class="skill-tag">Figma</span><span class="skill-tag">Adobe XD</span><span class="skill-tag">Illustrator</span><span class="skill-tag">After Effects</span><span class="skill-tag">Blender</span><span class="skill-tag">Unity</span></div>
+            <div><span class="skill-tag">Figma</span><span class="skill-tag">Adobe Photoshop</span><span
+                class="skill-tag">Illustrator</span><span class="skill-tag">After Effects</span><span
+                class="skill-tag">Maya</span><span class="skill-tag">Unity</span></div>
           </div>
           <div>
             <div class="label-mono" style="margin-bottom:8px">DEVELOPMENT</div>
-            <div><span class="skill-tag">HTML / CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">React</span><span class="skill-tag">VS Code</span><span class="skill-tag">Three.js</span><span class="skill-tag">WebGL</span></div>
+            <div><span class="skill-tag">HTML / CSS</span><span class="skill-tag">JavaScript</span><span
+                class="skill-tag">C++</span><span class="skill-tag">VS Code</span><span class="skill-tag">Python</span>
+            </div>
           </div>
         </div>
 
@@ -165,280 +218,456 @@
           <div class="paperclip"></div>
           <div class="label-mono">Education</div>
           <div class="name-serif" style="font-size:22px">Academic Record</div>
-          <div class="timeline-dot-item"><div class="dot" style="background:var(--brown)"></div><div><div class="label-mono-sm">2023 – Present</div><div class="item-title">B.S. Information Communication</div><div class="item-sub">Yuan Ze University</div></div></div>
-          <div class="timeline-dot-item"><div class="dot" style="background:var(--brown)"></div><div><div class="label-mono-sm">2024</div><div class="item-title">AI Competition</div><div class="item-sub">Prof. Fang Research Lab</div></div></div>
-          <div class="timeline-dot-item"><div class="dot" style="background:var(--brown)"></div><div><div class="label-mono-sm">2024</div><div class="item-title">Teaching Assistant</div><div class="item-sub">Yuan Ze University</div></div></div>
+          <div class="timeline-dot-item">
+            <div class="dot" style="background:var(--brown)"></div>
+            <div>
+              <div class="label-mono-sm">2025</div>
+              <div class="item-title">CyberSpace 2025</div>
+              <div class="item-sub">Automatic Customer Clustering Service Prototype Design by Hybrid
+                Methods - AI approach</div>
+            </div>
+          </div>
+          <div class="timeline-dot-item">
+            <div class="dot" style="background:var(--brown)"></div>
+            <div>
+              <div class="label-mono-sm">2025</div>
+              <div class="item-title">20th International Congress on Advanced Applied Informatics</div>
+              <div class="item-sub">From Virtual Romance to Tangible Risk Awareness: Designing a Board Game to
+                Physicalize Online Dating Fraud Scenarios</div>
+            </div>
+          </div>
+          <div class="timeline-dot-item">
+            <div class="dot" style="background:var(--brown)"></div>
+            <div>
+              <div class="label-mono-sm">2026</div>
+              <div class="item-title">International Conference on Innovation, Management and Knowledge
+                Community.</div>
+              <div class="item-sub">An AI-Based Pipeline for Personalized Learning Path Generation
+                from Hand-Graded Examination Documents.</div>
+            </div>
+          </div>
         </div>
 
         <!-- EXPERIENCE -->
         <div class="paper-card reveal" style="animation-delay:0.4s">
           <div class="label-mono">Experience</div>
           <div class="name-serif" style="font-size:22px">Work Record</div>
-          <div class="timeline-dot-item"><div class="dot" style="background:var(--folder-blue)"></div><div><div class="label-mono-sm">2024 – Present</div><div class="item-title">Research Assistant</div><div class="item-sub">Prof. Fang's AI Research Lab — Deep Learning</div></div></div>
-          <div class="timeline-dot-item"><div class="dot" style="background:var(--folder-yellow)"></div><div><div class="label-mono-sm">2024</div><div class="item-title">Teaching Assistant</div><div class="item-sub">Yuan Ze University — Taipei</div></div></div>
-          <div class="timeline-dot-item"><div class="dot" style="background:var(--folder-green)"></div><div><div class="label-mono-sm">2024</div><div class="item-title">AI Competition</div><div class="item-sub">Machine Learning & Data Science</div></div></div>
+          <div class="timeline-dot-item">
+            <div class="dot" style="background:var(--folder-blue)"></div>
+            <div>
+              <div class="label-mono-sm">2025 - Present</div>
+              <div class="item-title">Research Assistant</div>
+              <div class="item-sub">Prof.Fang's Research Lab</div>
+            </div>
+          </div>
+          <div class="timeline-dot-item">
+            <div class="dot" style="background:var(--folder-yellow)"></div>
+            <div>
+              <div class="label-mono-sm">2025</div>
+              <div class="item-title">Teaching Assistant</div>
+              <div class="item-sub">Yuan Ze University</div>
+            </div>
+          </div>
+          <div class="timeline-dot-item">
+            <div class="dot" style="background:var(--folder-green)"></div>
+            <div>
+              <div class="label-mono-sm">2025 - Present</div>
+              <div class="item-title">Participant</div>
+              <div class="item-sub">AI Conference</div>
+            </div>
+          </div>
         </div>
 
         <!-- LANGUAGES & CONTACT -->
         <div class="paper-card reveal" style="grid-column:span 1;animation-delay:0.5s">
           <div class="label-mono">Languages & Contact</div>
           <div class="name-serif" style="font-size:20px">Languages</div>
-          <div class="timeline-dot-item"><div class="dot" style="width:7px;height:7px;background:var(--folder-green)"></div><div><div class="item-title">Vietnamese</div><div class="item-sub">Native</div></div></div>
-          <div class="timeline-dot-item"><div class="dot" style="width:7px;height:7px;background:var(--folder-blue)"></div><div><div class="item-title">Chinese</div><div class="item-sub">B2 TOCFL</div></div></div>
-          <div class="timeline-dot-item"><div class="dot" style="width:7px;height:7px;background:var(--folder-pink)"></div><div><div class="item-title">English</div><div class="item-sub">710 TOEIC</div></div></div>
+          <div class="timeline-dot-item">
+            <div class="dot" style="width:7px;height:7px;background:var(--folder-green)"></div>
+            <div>
+              <div class="item-title">Vietnamese</div>
+              <div class="item-sub">Native</div>
+            </div>
+          </div>
+          <div class="timeline-dot-item">
+            <div class="dot" style="width:7px;height:7px;background:var(--folder-blue)"></div>
+            <div>
+              <div class="item-title">Chinese</div>
+              <div class="item-sub">B2 TOCFL</div>
+            </div>
+          </div>
+          <div class="timeline-dot-item">
+            <div class="dot" style="width:7px;height:7px;background:var(--folder-pink)"></div>
+            <div>
+              <div class="item-title">English</div>
+              <div class="item-sub">710 TOEIC</div>
+            </div>
+          </div>
           <div class="name-serif" style="font-size:20px;margin:18px 0 12px">Get in Touch</div>
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px"><div style="width:6px;height:6px;border-radius:50%;background:var(--folder-green);flex-shrink:0"></div><span class="contact-text">tranngockhanh28112005@gmail.com</span></div>
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px"><div style="width:6px;height:6px;border-radius:50%;background:var(--folder-blue);flex-shrink:0"></div><span class="contact-text">linkedin.com/in/sallytran</span></div>
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px"><div style="width:6px;height:6px;border-radius:50%;background:var(--folder-pink);flex-shrink:0"></div><span class="contact-text">behance.net/sallytran</span></div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--folder-green);flex-shrink:0"></div><span
+              class="contact-text">tranngockhanh28112005@gmail.com</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--folder-blue);flex-shrink:0"></div><span
+              class="contact-text">instagram: n_khanhs__</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:7px">
+            <div style="width:6px;height:6px;border-radius:50%;background:var(--folder-pink);flex-shrink:0"></div><span
+              class="contact-text">phone number: 0901 171 069</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════ UI/UX ═══════ -->
-    <section id="uiux" class="section-panel uiux-bg" style="padding:120px 48px 80px;min-height:100vh;position:relative;display:none">
+    <!--  UI/UX  -->
+    <section id="uiux" class="section-panel uiux-bg"
+      style="padding:120px 48px 80px;min-height:100vh;position:relative;display:none">
       <svg class="doodle" style="top:160px;left:48px;width:100px;height:100px;opacity:0.1" viewBox="0 0 100 100">
-        <path d="M10,50 Q30,10 50,50 Q70,90 90,50" stroke="rgba(139,115,85,0.9)" stroke-width="1.5" fill="none" class="path-draw"/>
-        <circle cx="10" cy="50" r="3" fill="rgba(139,115,85,0.5)"/><circle cx="50" cy="50" r="3" fill="rgba(139,115,85,0.5)"/><circle cx="90" cy="50" r="3" fill="rgba(139,115,85,0.5)"/>
+        <path d="M10,50 Q30,10 50,50 Q70,90 90,50" stroke="rgba(139,115,85,0.9)" stroke-width="1.5" fill="none"
+          class="path-draw" />
+        <circle cx="10" cy="50" r="3" fill="rgba(139,115,85,0.5)" />
+        <circle cx="50" cy="50" r="3" fill="rgba(139,115,85,0.5)" />
+        <circle cx="90" cy="50" r="3" fill="rgba(139,115,85,0.5)" />
       </svg>
 
-      <div class="section-header"><div class="section-tag">File No. 002</div><h2 class="section-title">Design <em>Workspace</em></h2></div>
+      <div class="section-header">
+        <div class="section-tag">File No. 002</div>
+        <h2 class="section-title">Design <em>Workspace</em></h2>
+      </div>
 
       <div class="uiux-grid">
+
         <!-- Ticket Booking -->
         <div class="project-card reveal">
           <div style="height:5px;background:var(--folder-yellow)"></div>
           <div class="tape" style="left:38px;width:58px;background:rgba(201,168,76,0.35);transform:rotate(-1deg)"></div>
           <div class="paperclip"></div>
+
+          <div class="project-banner">
+            <div class="banner-stamp">SELECTED WORK</div>
+            <img src="assets/TicketAppBanner.png" alt="Ticket Booking App Banner">
+          </div>
+
           <div style="padding:26px 24px 18px">
-            <div class="label-mono">Project 01 — UI/UX</div>
+            <div class="label-mono">Project 01 - UI/UX</div>
             <div class="project-title">Ticket Booking App</div>
-            <div class="desc-text">A seamless event ticketing experience designed for speed and delight. From discovery to checkout in under 60 seconds.</div>
+            <div class="desc-text">
+              Your next adventure is just a tap away. Explore the world with seamless booking.
+            </div>
           </div>
-          <div class="mock-area light-mock">
-            <div class="mock-phone float-a"><div style="margin-top:20px"><div class="mock-bar"></div><div class="mock-bar" style="width:60%;opacity:0.4"></div><div style="width:32px;height:32px;border-radius:50%;background:var(--folder-yellow);opacity:0.28;margin:8px auto"></div><div class="mock-bar" style="width:80%"></div><div class="mock-bar" style="background:var(--folder-yellow);opacity:0.45;margin-top:12px"></div></div></div>
-            <div class="mock-phone float-b" style="transform:rotate(5deg) translateY(10px);opacity:0.65"><div style="margin-top:20px"><div class="mock-bar"></div><div style="width:28px;height:28px;border-radius:50%;background:var(--brown);opacity:0.2;margin:10px auto"></div><div class="mock-bar" style="opacity:0.35"></div></div></div>
-            <div class="sticky" style="background:#FDEEA0;transform:rotate(3deg);top:18px;right:18px;width:82px">User flow ↗\n3 taps to buy</div>
-            <div class="sticky" style="background:#C8E6C9;transform:rotate(-4deg);bottom:18px;left:18px;width:82px">Research done ✓</div>
+
+          <div style="padding:14px 24px 6px;display:flex;gap:8px;flex-wrap:wrap">
+            <span class="proj-tag">Figma</span>
+            <span class="proj-tag">User Research</span>
+            <span class="proj-tag">Prototyping</span>
+            <span class="proj-tag">iOS Design</span>
           </div>
-          <div style="padding:14px 24px 6px;display:flex;gap:8px;flex-wrap:wrap"><span class="proj-tag">Figma</span><span class="proj-tag">User Research</span><span class="proj-tag">Prototyping</span><span class="proj-tag">iOS Design</span></div>
-          <div style="padding:8px 24px 24px"><button class="open-btn" data-case="ticket">Open Case Study →</button></div>
+
+          <div style="padding:8px 24px 24px">
+            <button class="open-btn" data-case="ticket">
+              Open Case Study <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
         </div>
 
         <!-- Coffee Ordering -->
         <div class="project-card reveal" style="animation-delay:0.1s">
           <div style="height:5px;background:#A87878"></div>
-          <div class="tape" style="left:38px;width:58px;background:rgba(168,120,120,0.32);transform:rotate(-1deg)"></div>
+          <div class="tape" style="left:38px;width:58px;background:rgba(168,120,120,0.32);transform:rotate(-1deg)">
+          </div>
           <div class="paperclip"></div>
+
+          <div class="project-banner">
+            <div class="banner-stamp">SELECTED WORK</div>
+            <img src="assets/CoffeeBanner.png" alt="Coffee Ordering App Banner">
+          </div>
+
           <div style="padding:26px 24px 18px">
-            <div class="label-mono">Project 02 — UI/UX</div>
+            <div class="label-mono">Project 02 - UI/UX</div>
             <div class="project-title">Coffee Ordering App</div>
-            <div class="desc-text">A warm, sensory-driven ordering experience that makes every cup feel personal. Designed for the ritual of coffee.</div>
+            <div class="desc-text">
+              Skip the lines and premium-craft your morning ritual with just a single tap.
+            </div>
           </div>
-          <div class="mock-area dark-mock">
-            <div class="phone-img float-a" style="transform:rotate(-5deg) translateY(-8px)"><img src="assets/1.png" alt="splash"></div>
-            <div class="phone-img float-b" style="transform:rotate(0deg) translateY(-14px) scale(1.08);z-index:3"><img src="assets/4.png" alt="sign-up"></div>
-            <div class="phone-img float-a" style="transform:rotate(5deg) translateY(-8px)"><img src="assets/6.png" alt="menu"></div>
-            <div class="sticky" style="background:#FFD7B5;transform:rotate(-3deg);top:18px;right:18px;width:82px">Warm palette\n= cozy feel</div>
-            <div class="sticky" style="background:#C8E6C9;transform:rotate(2deg);bottom:18px;left:18px;width:82px">5 user tests ↑</div>
+
+          <div style="padding:14px 24px 6px;display:flex;gap:8px;flex-wrap:wrap">
+            <span class="proj-tag">Figma</span>
+            <span class="proj-tag">Brand Design</span>
+            <span class="proj-tag">Usability Test</span>
+            <span class="proj-tag">Android</span>
           </div>
-          <div style="padding:14px 24px 6px;display:flex;gap:8px;flex-wrap:wrap"><span class="proj-tag">Figma</span><span class="proj-tag">Brand Design</span><span class="proj-tag">Usability Test</span><span class="proj-tag">Android</span></div>
-          <div style="padding:8px 24px 24px"><button class="open-btn" data-case="coffee">Open Case Study →</button></div>
+
+          <div style="padding:8px 24px 24px">
+            <button class="open-btn" data-case="coffee">
+              Open Case Study <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════ WEB DEV ═══════ -->
-    <section id="webdev" class="section-panel webdev-bg" style="min-height:100vh;color:var(--cream);position:relative;display:none">
-      <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 20% 50%,rgba(74,107,138,0.12)0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(92,122,92,0.08)0%,transparent 60%)"></div>
+    <!-- WEB DEV -->
+    <section id="webdev" class="section-panel webdev-bg"
+      style="min-height:100vh;color:var(--cream);position:relative;display:none">
 
       <div style="padding:120px 0 0;position:relative;z-index:1">
-        <div class="section-header dark"><div class="section-tag" style="color:rgba(212,197,169,0.45)">File No. 003</div><h2 class="section-title" style="color:var(--cream)">Developer's <em>Workbench</em></h2></div>
-        <div style="text-align:center;margin-bottom:56px">
-          <div style="display:inline-flex;align-items:center;gap:10px;padding:8px 20px;border:1px solid rgba(255,255,255,0.08);border-radius:2px;font-family:var(--mono);font-size:10px;letter-spacing:0.2em;color:rgba(212,197,169,0.45);text-transform:uppercase">
-            <span style="width:6px;height:6px;border-radius:50%;background:#28CA41;display:inline-block;animation:orbPulse 2s ease-in-out infinite"></span>
-            Single Project — Personal Portfolio Website
-          </div>
+        <div class="section-header dark">
+          <div class="section-tag" style="color:rgba(212,197,169,0.45)">File No. 003</div>
+          <h2 class="section-title" style="color:var(--cream)">
+            Developer's <em>Workbench</em>
+          </h2>
         </div>
       </div>
 
-      <!-- Browser mockup -->
-      <div class="reveal" style="max-width:1100px;margin:0 auto;padding:0 48px;position:relative;z-index:1">
-        <div class="terminal-card" style="border-radius:12px">
-          <div style="background:rgba(255,255,255,0.05);padding:10px 16px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,0.07)">
-            <div style="width:12px;height:12px;border-radius:50%;background:#FF5F57"></div>
-            <div style="width:12px;height:12px;border-radius:50%;background:#FFBD2E"></div>
-            <div style="width:12px;height:12px;border-radius:50%;background:#28CA41"></div>
-            <div style="flex:1;background:rgba(255,255,255,0.05);border-radius:4px;padding:5px 14px;font-family:var(--mono);font-size:11px;color:rgba(212,197,169,0.38);margin-left:8px">https://sallytran.co</div>
-            <div style="font-family:var(--mono);font-size:10px;color:#28CA41;letter-spacing:0.05em">✓ Live</div>
-          </div>
-          <div style="height:420px;background:linear-gradient(180deg,#FAF7F2 0%,#F0EAE0 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center">
-            <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(139,115,85,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(139,115,85,0.06) 1px,transparent 1px);background-size:30px 30px"></div>
-            <div style="position:absolute;top:0;left:0;right:0;height:44px;background:rgba(250,247,242,0.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(139,115,85,0.12);display:flex;align-items:center;justify-content:space-between;padding:0 28px">
-              <div style="font-family:var(--serif);font-size:16px;color:#4A3728">Sally's <em style="font-style:italic;color:#8B7355">Archive</em></div>
-              <div style="display:flex;gap:20px"><span style="font-family:var(--mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#9E9589">Introduction</span><span style="font-family:var(--mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#9E9589">UI/UX</span><span style="font-family:var(--mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#9E9589">Web Dev</span><span style="font-family:var(--mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#9E9589">3D</span><span style="font-family:var(--mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#9E9589">Papers</span></div>
-            </div>
-            <div style="text-align:center;position:relative;z-index:2;margin-top:20px">
-              <div style="font-family:var(--serif);font-size:64px;font-weight:300;color:#4A3728;line-height:0.95;letter-spacing:-0.02em">Sally's<br><em style="font-style:italic;color:#8B7355">Archive Box</em></div>
-              <div style="font-family:var(--mono);font-size:10px;color:#9E9589;margin-top:10px;letter-spacing:0.2em;text-transform:uppercase">Hover the box to explore</div>
-            </div>
-            <div style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:90px;height:68px">
-              <div style="position:absolute;top:0;left:-3px;right:-3px;height:18px;background:linear-gradient(145deg,#C8B896,#B8A07E);border-radius:3px 3px 0 0;border:1px solid rgba(139,115,85,0.4)"></div>
-              <div style="position:absolute;bottom:0;left:0;right:0;height:54px;background:linear-gradient(145deg,#D4C5A9,#C0AA88);border-radius:2px 2px 6px 6px;border:1px solid rgba(139,115,85,0.4)"></div>
-            </div>
-            <div id="featureBadge" style="position:absolute;bottom:20px;right:24px;background:rgba(74,55,40,0.9);border:1px solid rgba(139,115,85,0.3);border-radius:6px;padding:10px 14px;animation:pageEnter 0.4s ease both">
-              <div style="font-family:var(--mono);font-size:9px;color:rgba(212,197,169,0.5);letter-spacing:0.1em;margin-bottom:4px">FEATURE</div>
-              <div id="featureLabel" style="font-family:var(--sans);font-size:11px;color:#D4C5A9;font-weight:500">Parallax Scroll</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="wd-wrap">
 
-      <!-- Code + Skills -->
-      <div style="max-width:1100px;margin:0 auto;padding:64px 48px 80px;display:grid;grid-template-columns:1fr 1fr;gap:32px;position:relative;z-index:1">
-        <!-- Code window -->
-        <div class="reveal" style="animation-delay:0.1s">
-          <div class="label-mono-dark">Code Preview</div>
-          <div class="terminal-card">
-            <div style="background:rgba(255,255,255,0.05);padding:10px 14px;display:flex;gap:6px;border-bottom:1px solid rgba(255,255,255,0.06)">
-              <div style="width:10px;height:10px;border-radius:50%;background:#FF5F57"></div>
-              <div style="width:10px;height:10px;border-radius:50%;background:#FFBD2E"></div>
-              <div style="width:10px;height:10px;border-radius:50%;background:#28CA41"></div>
-              <span style="font-family:var(--mono);font-size:10px;color:rgba(212,197,169,0.5);margin-left:8px">parallax.js</span>
+        <!-- BROWSER + FILMSTRIP -->
+        <div class="browser-wrap">
+          <div class="wd-label" style="color:rgba(212,197,169,0.38)">Code Preview - Live Demo</div>
+          <div class="browser-chrome">
+            <div class="browser-bar">
+              <div class="dot-r"></div>
+              <div class="dot-y"></div>
+              <div class="dot-g"></div>
+              <div class="url-bar">
+                <i class="ti ti-lock" style="font-size:10px;color:rgba(212,197,169,0.3)" aria-hidden="true"></i>
+                fly-travel-demo.com
+              </div>
+              <div class="live-badge"> LIVE</div>
             </div>
-            <div class="code-lines" style="padding:20px 24px">
-              <div class="code-line" style="padding-left:0"><span class="ck" style="color:#7EB8D4">const</span><span class="cr" style="color:rgba(212,197,169,0.42)"> initParallax = () &nbsp;{</span></div>
-              <div class="code-line" style="padding-left:14px"><span class="ck" style="color:#C9A84C">const</span><span class="cr" style="color:rgba(212,197,169,0.42)"> layers = document.querySelectorAll</span></div>
-              <div class="code-line" style="padding-left:28px"><span class="ck" style="color:#7AC47A">(</span><span class="cr" style="color:rgba(212,197,169,0.42)">'[data-depth]'</span></div>
-              <div class="code-line" style="padding-left:14px"><span class="ck" style="color:rgba(212,197,169,0.55)"></span><span class="cr" style="color:rgba(212,197,169,0.42)">)</span></div>
-              <div class="code-line" style="padding-left:14px"><span class="ck" style="color:rgba(212,197,169,0.55)">window</span><span class="cr" style="color:rgba(212,197,169,0.42)">.addEventListener(</span></div>
-              <div class="code-line" style="padding-left:28px"><span class="ck" style="color:#C9A84C">'scroll'</span><span class="cr" style="color:rgba(212,197,169,0.42)">, () => {</span></div>
-              <div class="code-line" style="padding-left:28px"><span class="ck" style="color:rgba(212,197,169,0.55)">layers</span><span class="cr" style="color:rgba(212,197,169,0.42)">.forEach(el => {</span></div>
-              <div class="code-line" style="padding-left:42px"><span class="ck" style="color:#7EB8D4">const</span><span class="cr" style="color:rgba(212,197,169,0.42)"> depth = el.dataset.depth</span></div>
-              <div class="code-line" style="padding-left:42px"><span class="ck" style="color:#7AC47A">el</span><span class="cr" style="color:rgba(212,197,169,0.42)">.style.transform =</span></div>
-              <div class="code-line" style="padding-left:56px"><span class="ck" style="color:#C9A84C">`translateY`</span><span class="cr" style="color:rgba(212,197,169,0.42)">(${scrollY * depth}px)`</span></div>
-              <div class="code-line" style="padding-left:28px"><span class="ck" style="color:rgba(212,197,169,0.55)">})</span><span class="cr"></span></div>
-              <div class="code-line" style="padding-left:14px"><span class="ck" style="color:rgba(212,197,169,0.55)">})</span><span class="cr"></span></div>
-              <div class="code-line" style="padding-left:0"><span class="ck" style="color:#7EB8D4">}</span><span class="cr"></span></div>
+            <!-- top perforation -->
+            <div class="perf-strip" id="topPerf"></div>
+            <!-- filmstrip -->
+            <div class="filmstrip-viewport">
+              <div class="scanlines"></div>
+              <div class="filmstrip" id="filmstrip"></div>
             </div>
+            <!-- bottom perf -->
+            <div class="perf-strip" id="botPerf"></div>
+          </div>
+          <div style="padding:10px 0 0;display:flex;align-items:center;justify-content:space-between">
+            <span style="font-family:var(--mono);font-size:9px;color:rgba(212,197,169,0.28);letter-spacing:0.12em">HOVER
+              TO PAUSE FILMSTRIP</span>
+            <span style="font-family:var(--mono);font-size:9px;color:rgba(212,197,169,0.28);letter-spacing:0.12em">FLY
+              TICKET BOOKING · HTML / CSS / JS · 2025</span>
           </div>
         </div>
 
-        <!-- Tech stack + skills -->
-        <div class="reveal" style="animation-delay:0.15s">
-          <div class="label-mono-dark">Tech Stack</div>
-          <div id="skillsSection" style="display:flex;flex-direction:column;gap:18px;margin-bottom:32px">
-            <div><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span class="skill-label">HTML5</span><span class="skill-pct">95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="95"></div></div></div>
-            <div><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span class="skill-label">CSS3 / SCSS</span><span class="skill-pct">92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="92"></div></div></div>
-            <div><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span class="skill-label">Vanilla JS</span><span class="skill-pct">88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="88"></div></div></div>
-            <div><div style="display:flex;justify-content:space-between;margin-bottom:6px"><span class="skill-label">GSAP</span><span class="skill-pct">80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-level="80"></div></div></div>
+        <!-- LOWER: TERMINAL + SKILLS -->
+        <div class="lower-grid">
+          <div>
+            <div class="wd-label">Code Snapshot</div>
+            <div class="terminal">
+              <div class="term-header">
+                <div class="dot-r"></div>
+                <div class="dot-y"></div>
+                <div class="dot-g"></div>
+                <span class="term-filename">parallax.js ??? ~/fly-project/src</span>
+              </div>
+              <div class="term-body">
+                <div class="code-line"><span class="ln">1</span><span class="cm">// depth-driven scroll parallax</span>
+                </div>
+                <div class="code-line"><span class="ln">2</span><span class="kw">const</span> <span
+                    class="fn">initParallax</span> = () => {</div>
+                <div class="code-line"><span class="ln">3</span>&nbsp;&nbsp;<span class="kw">const</span> layers =
+                  document</div>
+                <div class="code-line"><span class="ln">4</span>&nbsp;&nbsp;&nbsp;&nbsp;.querySelectorAll(<span
+                    class="str">'[data-depth]'</span>)</div>
+                <div class="code-line"><span class="ln">5</span>&nbsp;&nbsp;window.addEventListener(<span
+                    class="str">'scroll'</span>, () => {</div>
+                <div class="code-line"><span class="ln">6</span>&nbsp;&nbsp;&nbsp;&nbsp;layers.forEach(el => {</div>
+                <div class="code-line"><span class="ln">7</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                    class="kw">const</span> d = el.dataset.depth</div>
+                <div class="code-line"><span class="ln">8</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el.style.transform =
+                </div>
+                <div class="code-line"><span class="ln">9</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                    class="str">`translateY(${scrollY * d}px)`</span></div>
+                <div class="code-line"><span class="ln">10</span>&nbsp;&nbsp;&nbsp;&nbsp;}) })<span
+                    class="cursor-blink"></span></div>
+              </div>
+            </div>
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
-            <div class="stat-card"><div style="font-family:var(--serif);font-size:28px;color:var(--cream);font-weight:300">99</div><div class="stat-label">Lighthouse</div></div>
-            <div class="stat-card"><div style="font-family:var(--serif);font-size:28px;color:var(--cream);font-weight:300">&lt; 1.2s</div><div class="stat-label">LCP</div></div>
-            <div class="stat-card"><div style="font-family:var(--serif);font-size:28px;color:var(--cream);font-weight:300">48kb</div><div class="stat-label">Bundle</div></div>
+
+          <div>
+            <div class="wd-label">Tech Stack</div>
+            <div class="skills-panel" id="skillsPanel"></div>
+            <div class="stats-row">
+              <div class="stat-box">
+                <div class="stat-num">99</div>
+                <div class="stat-tag">Lighthouse</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-num">&lt;1.2s</div>
+                <div class="stat-tag">LCP</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-num">48kb</div>
+                <div class="stat-tag">Bundle</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FEATURES -->
+          <div class="features-grid">
+            <div class="wd-label">Key Features</div>
+            <div class="feat-list" id="featList"></div>
           </div>
         </div>
 
-        <!-- Feature grid -->
-        <div class="reveal" style="grid-column:span 2;animation-delay:0.2s">
-          <div class="label-mono-dark" style="margin-bottom:20px">Key Features</div>
-          <div id="featuresGrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px"></div>
+        <!-- DEMO BTN -->
+        <div class="demo-btn-wrap">
+          <span class="tag-pill">HTML5</span>
+          <span class="tag-pill">CSS</span>
+          <span class="tag-pill">JS</span>
+          <span class="tag-pill">Multi-page</span>
         </div>
       </div>
     </section>
 
-    <!-- ═══════ 3D ANIMATION ═══════ -->
-    <section id="anim3d" class="section-panel" style="min-height:100vh;background:#060606;color:var(--cream);position:relative;overflow:hidden;display:none">
-      <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% -10%,rgba(154,74,74,0.08)0%,transparent 55%);z-index:0"></div>
-      <div style="position:absolute;inset:0;pointer-events:none;z-index:1;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.04) 2px,rgba(0,0,0,0.04) 4px)"></div>
+    <!-- 3D ANIMATION -->
+    <section id="anim3d" class="section-panel"
+      style="min-height:100vh;background:#060606;color:var(--cream);position:relative;overflow:hidden;display:none">
+
+      <div
+        style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% -10%,rgba(154,74,74,0.08) 0%,transparent 55%);z-index:0">
+      </div>
+
+      <div
+        style="position:absolute;inset:0;pointer-events:none;z-index:1;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.04) 2px,rgba(0,0,0,0.04) 4px)">
+      </div>
 
       <div style="position:relative;z-index:2;padding:120px 0 80px">
-        <div class="section-header dark"><div class="section-tag" style="color:rgba(212,197,169,0.45)">File No. 004</div><h2 class="section-title" style="color:var(--cream)">Digital <em>Cinema</em></h2></div>
+
+        <div class="section-header dark">
+          <div class="section-tag" style="color:rgba(212,197,169,0.45)">File No. 004</div>
+          <h2 class="section-title" style="color:var(--cream)">Digital <em>Animation</em></h2>
+        </div>
 
         <!-- Video Player -->
-        <div class="reveal" style="max-width:960px;margin:0 auto 80px;padding:0 48px">
+        <div class="reveal" style="max-width:680px;margin:0 auto 100px;padding:0">
+
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px">
             <div style="display:flex;gap:16px">
-              <div style="display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#FF5F57;animation:orbPulse 2s ease-in-out infinite"></div><span style="font-family:var(--mono);font-size:9px;letter-spacing:0.14em;color:rgba(212,197,169,0.38)">LIVE</span></div>
-              <div style="display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#FFBD2E"></div><span style="font-family:var(--mono);font-size:9px;letter-spacing:0.14em;color:rgba(212,197,169,0.38)">HD</span></div>
-              <div style="display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:50%;background:#28CA41"></div><span style="font-family:var(--mono);font-size:9px;letter-spacing:0.14em;color:rgba(212,197,169,0.38)">4K</span></div>
+              <div style="display:flex;align-items:center;gap:6px">
+                <div
+                  style="width:7px;height:7px;border-radius:50%;background:#FF5F57;animation:orbPulse 2s ease-in-out infinite">
+                </div>
+                <span style="font-family:var(--mono);font-size:9px;letter-spacing:0.14em;color:rgba(212,197,169,0.38)">
+                  AUTO PLAY
+                </span>
+              </div>
+
+              <div style="display:flex;align-items:center;gap:6px">
+                <div style="width:7px;height:7px;border-radius:50%;background:#FFBD2E"></div>
+                <span style="font-family:var(--mono);font-size:9px;letter-spacing:0.14em;color:rgba(212,197,169,0.38)">
+                  HD
+                </span>
+              </div>
             </div>
-            <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.14em;color:rgba(212,197,169,0.3)">NOW SHOWING — The Light We Lost · 2024</div>
+
+            <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.14em;color:rgba(212,197,169,0.3)">
+              NOW SHOWING - The Light We Lost - 2025
+            </div>
           </div>
 
-          <div id="videoPlayer" style="aspect-ratio:16/9;background:linear-gradient(135deg,#1a0a20,#3a1040,#6a2060,#1a0a20);border-radius:6px;border:1px solid rgba(255,255,255,0.1);box-shadow:0 40px 120px rgba(0,0,0,0.8),0 0 80px rgba(106,32,96,0.2);position:relative;overflow:hidden;cursor:none">
-            <div style="position:absolute;top:30%;left:40%;width:220px;height:220px;border-radius:50%;background:rgba(180,80,220,0.12);filter:blur(40px);animation:orbGlow 4s ease-in-out infinite"></div>
-            <div style="position:absolute;top:50%;left:55%;width:140px;height:140px;border-radius:50%;background:rgba(80,100,220,0.1);filter:blur(30px);animation:orbGlow 5s ease-in-out infinite 1s"></div>
-            <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.18" viewBox="0 0 1600 900">
-              <polygon points="800,80 1200,700 400,700" fill="none" stroke="rgba(180,80,220,0.8)" stroke-width="1"/>
-              <polygon points="800,140 1140,660 460,660" fill="none" stroke="rgba(180,80,220,0.4)" stroke-width="0.5"/>
-              <circle cx="800" cy="450" r="220" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="8 14"/>
-              <circle cx="800" cy="450" r="150" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-              <line x1="0" y1="450" x2="1600" y2="450" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
-              <line x1="800" y1="0" x2="800" y2="900" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
-            </svg>
-            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:90px;height:90px;border-radius:50%;background:rgba(180,80,220,0.18);border:1px solid rgba(180,80,220,0.5);animation:orbPulse 3s ease-in-out infinite;box-shadow:0 0 60px rgba(180,80,220,0.2)"></div>
-            <div id="playOverlay" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.35);transition:background 0.4s">
-              <div id="playBtn" style="width:64px;height:64px;border-radius:50%;border:2px solid rgba(255,255,255,0.6);display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);backdrop-filter:blur(8px);transition:transform 0.2s,background 0.2s">
-                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M7 4l12 7-12 7V4z" fill="rgba(255,255,255,0.9)"/></svg>
-              </div>
-            </div>
-            <div style="position:absolute;bottom:0;left:0;right:0;padding:40px 24px 18px;background:linear-gradient(transparent,rgba(0,0,0,0.75))">
-              <div style="display:flex;align-items:flex-end;justify-content:space-between">
+          <div id="videoPlayer"
+            style="width:100%;aspect-ratio:16/9;position:relative;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);box-shadow:0 30px 90px rgba(0,0,0,0.72);background:#000">
+
+            <video autoplay muted loop playsinline preload="auto"
+              style="width:100%;height:100%;object-fit:cover;display:block">
+              <source src="assets/the light we lost.mp4" type="video/mp4">
+            </video>
+
+            <div
+              style="position:absolute;bottom:0;left:0;right:0;padding:36px 22px 16px;background:linear-gradient(transparent,rgba(0,0,0,0.78))">
+
+              <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:18px">
+
                 <div>
-                  <div style="font-family:var(--serif);font-size:22px;color:rgba(255,255,255,0.92);margin-bottom:3px">The Light We Lost</div>
-                  <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.18em;color:rgba(255,255,255,0.38)">BLENDER 4.1 · CYCLES X · 2024 · 01:42</div>
+                  <div style="font-family:var(--serif);font-size:21px;color:rgba(255,255,255,0.92);margin-bottom:3px">
+                    The Light We Lost
+                  </div>
+
+                  <div style="font-family:var(--mono);font-size:9px;letter-spacing:0.18em;color:rgba(255,255,255,0.38)">
+                    MAYA - 2025 - 01:00
+                  </div>
                 </div>
-                <div style="display:flex;gap:8px">
-                  <span style="font-family:var(--mono);font-size:8px;letter-spacing:0.1em;padding:3px 7px;border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:rgba(255,255,255,0.45)">CC</span>
-                  <span style="font-family:var(--mono);font-size:8px;letter-spacing:0.1em;padding:3px 7px;border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:rgba(255,255,255,0.45)">4K</span>
-                  <span style="font-family:var(--mono);font-size:8px;letter-spacing:0.1em;padding:3px 7px;border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:rgba(255,255,255,0.45)">STEREO</span>
+
+                <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end">
+                  <span
+                    style="font-family:var(--mono);font-size:8px;letter-spacing:0.1em;padding:3px 7px;border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:rgba(255,255,255,0.45)">3D
+                  </span>
+
+                  <span
+                    style="font-family:var(--mono);font-size:8px;letter-spacing:0.1em;padding:3px 7px;border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:rgba(255,255,255,0.45)">MAYA
+                  </span>
+
+                  <span
+                    style="font-family:var(--mono);font-size:8px;letter-spacing:0.1em;padding:3px 7px;border:1px solid rgba(255,255,255,0.2);border-radius:2px;color:rgba(255,255,255,0.45)">SHORT FILM
+                  </span>
                 </div>
               </div>
-              <div id="progressBar" style="margin-top:10px;height:2px;background:rgba(255,255,255,0.12);border-radius:1px;overflow:hidden"><div id="progressFill" style="height:100%;width:0%;background:rgba(180,80,220,0.8);border-radius:1px;transition:width 60s linear"></div></div>
+
+              <div
+                style="margin-top:10px;height:2px;background:rgba(255,255,255,0.12);border-radius:1px;overflow:hidden">
+                <div style="height:100%;width:100%;background:rgba(180,80,220,0.8);border-radius:1px"></div>
+              </div>
+
             </div>
           </div>
         </div>
 
-        <!-- Specs + Render passes -->
-        <div style="max-width:960px;margin:0 auto 64px;padding:0 48px;display:grid;grid-template-columns:1fr 1.4fr;gap:24px">
+        <!-- Specs + Scene Breakdown -->
+        <div style="max-width:680px;margin:0 auto 80px;padding:0;display:grid;grid-template-columns:1fr 1.4fr;gap:24px">
+
           <div class="reveal">
             <div class="label-mono-dark" style="margin-bottom:18px">Technical Specs</div>
-            <div id="specsTable" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:6px;overflow:hidden"></div>
+            <div id="specsTable"
+              style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:6px;overflow:hidden">
+            </div>
           </div>
+
           <div class="reveal" style="animation-delay:0.1s">
-            <div class="label-mono-dark" style="margin-bottom:18px">Render Passes</div>
+            <div class="label-mono-dark" style="margin-bottom:18px">Scene Breakdown</div>
             <div id="renderPasses" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px"></div>
           </div>
         </div>
 
         <!-- Production pipeline -->
-        <div style="max-width:960px;margin:0 auto;padding:0 48px 40px">
-          <div class="label-mono-dark" style="margin-bottom:24px">Production Pipeline</div>
+        <div style="max-width:680px;margin:0 auto;padding:0 0 40px">
+          <div class="label-mono-dark" style="margin-bottom:24px">Story Pipeline</div>
           <div id="pipelineGrid" style="display:grid;grid-template-columns:repeat(6,1fr);gap:8px"></div>
         </div>
+
       </div>
     </section>
 
-    <!-- ═══════ PAPERS ═══════ -->
-    <section id="papers" class="section-panel papers-bg" style="padding:120px 48px 80px;min-height:100vh;position:relative;display:none">
+    <!-- PAPERS -->
+    <section id="papers" class="section-panel papers-bg"
+      style="padding:120px 48px 80px;min-height:100vh;position:relative;display:none">
       <svg class="doodle" style="top:140px;right:56px;width:110px;height:110px;opacity:0.09" viewBox="0 0 110 110">
-        <path d="M10,55 L100,55 M55,10 L55,100" stroke="rgba(139,115,85,0.9)" stroke-width="1" class="path-draw"/>
-        <circle cx="55" cy="55" r="40" stroke="rgba(139,115,85,0.7)" stroke-width="1" fill="none" stroke-dasharray="5 7" class="path-draw"/>
+        <path d="M10,55 L100,55 M55,10 L55,100" stroke="rgba(139,115,85,0.9)" stroke-width="1" class="path-draw" />
+        <circle cx="55" cy="55" r="40" stroke="rgba(139,115,85,0.7)" stroke-width="1" fill="none" stroke-dasharray="5 7"
+          class="path-draw" />
       </svg>
 
-      <div class="section-header"><div class="section-tag">File No. 005</div><h2 class="section-title">Research <em>Library</em></h2></div>
+      <div class="section-header">
+        <div class="section-tag">File No. 005</div>
+        <h2 class="section-title">Research <em>Library</em></h2>
+      </div>
 
       <div id="papersGrid" class="papers-grid"></div>
     </section>
 
   </div><!-- end pageWrapper -->
 
-  <!-- ═══════ CASE STUDY OVERLAY ═══════ -->
+  <!-- CASE STUDY OVERLAY -->
   <div id="caseStudyOverlay" class="cs-overlay">
     <div id="caseStudyContent"></div>
   </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
