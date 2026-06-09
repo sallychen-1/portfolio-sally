@@ -141,14 +141,13 @@
       const scene = $('#boxScene');
 
       if (scene) {
-        scene.style.transition =
-          'transform 0.5s cubic-bezier(0.34, 1.2, 0.64, 1)';
+        scene.classList.add('reset-box');
         scene.style.transform = 'translate(0px, 0px)';
 
         setTimeout(() => {
-          scene.style.transition = '';
-          scene.style.transform = '';
-        }, 550);
+          scene.classList.remove('reset-box');
+          scene.style.transform = 'translate(0px, 0px)';
+        }, 450);
       }
     }
 
@@ -206,6 +205,7 @@
 
     scene.addEventListener('mousemove', (e) => {
       if (currentSection !== 'landing') return;
+      if (scene.classList.contains('reset-box')) return;
 
       const rect = scene.getBoundingClientRect();
 
@@ -221,6 +221,7 @@
 
       setTimeout(() => {
         scene.style.transition = '';
+        scene.style.transform = 'translate(0px, 0px)';
       }, 400);
     });
   }

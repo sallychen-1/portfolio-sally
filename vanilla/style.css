@@ -2156,3 +2156,27 @@ nav#mainNav {
 
   box-shadow: 0 0 12px rgba(201, 168, 76, .25);
 }
+
+.box-scene.reset-box {
+  transform: translate(0, 0) !important;
+}
+
+.box-scene.reset-box .box-lid {
+  transform: none !important;
+}
+
+.box-scene.reset-box .box-body-wrap {
+  transform: translateX(-50%) translateY(0) scale(1) !important;
+}
+
+.box-scene.reset-box .folder-item {
+  opacity: 0 !important;
+}
+
+.box-scene.reset-box .f1,
+.box-scene.reset-box .f2,
+.box-scene.reset-box .f3,
+.box-scene.reset-box .f4,
+.box-scene.reset-box .f5 {
+  transform: translateY(60px) scale(0.8) !important;
+}
